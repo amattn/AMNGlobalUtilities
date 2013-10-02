@@ -1,11 +1,12 @@
 /******************************************************************************
  *  \file GlobalUtilities.h
- *  \author Matthew Nunogawa
- *  \date 2012/03/27
+ *  \author Matt Nunogawa (@amattn)
+ *
  *  \brief Useful, Nigh-Indispensable Collection of macros and utilities
  *  \details Original version created by Matthew Nunogawa on Mon Sep 22 2003.
- *           https://github.com/amattn/RealLifeGlobalUtilities
- *  \version 2.1.5
+ *           https://github.com/amattn/AMNGlobalUtilities
+ *
+ *  \version 2.1.6
  *  \copyright Copyright Matthew Nunogawa 2003-2012.
  *             This software is provided under the MIT License.
  *             Please see LICENSE file.
