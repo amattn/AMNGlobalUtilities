@@ -6,8 +6,8 @@
  *  \details Original version created by Matthew Nunogawa on Mon Sep 22 2003.
  *           https://github.com/amattn/AMNGlobalUtilities
  *
- *  \version 2.1.6
- *  \copyright Copyright Matthew Nunogawa 2003-2012.
+ *  \version 2.1.7
+ *  \copyright Copyright Matthew Nunogawa 2003-2013.
  *             This software is provided under the MIT License.
  *             Please see LICENSE file.
  */
@@ -15,16 +15,11 @@
 #pragma mark -
 #pragma mark ** Convenience macros **
 
-#define RLYES [NSNumber numberWithBool:YES]
-#define RLNO [NSNumber numberWithBool:NO]
+// Quickly make an NSError
+#define AMNQUICK_ERROR(error_code, error_description) [NSError errorWithDomain:NSStringFromClass([self class]) code:error_code userInfo:[NSDictionary dictionaryWithObject:error_description forKey:NSLocalizedDescriptionKey]];
 
-#define RLQUICK_FLOAT(x) [NSNumber numberWithFloat:x]
-#define RLQUICK_INTEGER(x) [NSNumber numberWithInteger:x]
-#define RLSTRING_FROM_INT(x) [NSString stringWithFormat:@"%i", x]
-
-#define RLQUICK_ERROR(error_code, error_description) [NSError errorWithDomain:NSStringFromClass([self class]) code:error_code userInfo:[NSDictionary dictionaryWithObject:error_description forKey:NSLocalizedDescriptionKey]];
-
-#define RLORIENTATION_IS_PORTRAIT UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])
+// Quickly get portrait mode
+#define AMNORIENTATION_IS_PORTRAIT UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])
 
 #pragma mark -
 #pragma mark ** Log macros **
