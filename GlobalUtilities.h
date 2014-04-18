@@ -6,7 +6,7 @@
  *  \details Original version created by Matthew Nunogawa on Mon Sep 22 2003.
  *           https://github.com/amattn/AMNGlobalUtilities
  *
- *  \version 2.1.7
+ *  \version 2.1.8
  *  \copyright Copyright Matthew Nunogawa 2003-2013.
  *             This software is provided under the MIT License.
  *             Please see LICENSE file.
@@ -16,10 +16,10 @@
 #pragma mark ** Convenience macros **
 
 // Quickly make an NSError
-#define AMNQUICK_ERROR(error_code, error_description) [NSError errorWithDomain:NSStringFromClass([self class]) code:error_code userInfo:[NSDictionary dictionaryWithObject:error_description forKey:NSLocalizedDescriptionKey]];
+#define AMN_QUICK_ERROR(error_code, error_description) [NSError errorWithDomain:NSStringFromClass([self class]) code:error_code userInfo:[NSDictionary dictionaryWithObject:error_description forKey:NSLocalizedDescriptionKey]];
 
 // Quickly get portrait mode
-#define AMNORIENTATION_IS_PORTRAIT UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])
+#define AMN_ORIENTATION_IS_PORTRAIT UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])
 
 #pragma mark -
 #pragma mark ** Log macros **
@@ -120,6 +120,7 @@ static inline BOOL isEmpty(id thing)
     || ([thing respondsToSelector:@selector(count)] && [(NSArray *)thing count] == 0);
 }
 
+// UUIDs are uuuseful.
 static inline CFStringRef createUniqueString(void)
 {
     CFUUIDRef uuid = CFUUIDCreate(NULL);
